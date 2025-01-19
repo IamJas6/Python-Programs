@@ -138,3 +138,126 @@
 #     print('string is palindrome')
 # else:
 #     print('string is not palindrome')
+
+#16. WAP to toggle the given input string
+# s=input('enter string: ')
+# i=0
+# st=''
+# while i<len(s):
+#     if 'A'<=s[i]<='Z':
+#         st+=chr(ord(s[i])+32)
+#     elif 'a'<=s[i]<='z':
+#         st+=chr(ord(s[i])-32)
+#     else:
+#         st+=s[i]
+#     i+=1
+# print(st)
+
+#17. WAP to print product of individual digits of given integere number
+# n=int(input('enter number: '))
+# p=1
+# while n>0:
+#     r=n%10
+#     p=p*r
+#     n=n//10
+# print(p)
+
+#18. WAP to extract all the complex data items present in heterogenous list collection if length of output is >=3
+# then print output list else print input list
+# l=[3+4j,'a',4+2j,6+3j]
+# li=[]
+# i=0
+# while i<len(l):
+#     if type(l[i])==complex:
+#         li+=[l[i]]
+#     i+=1
+# if len(li)>=3:
+#     print(li)
+# else:
+#     print(l)
+
+#19. WAP to find sum of ascii value of all lower case alphabets present at even index from string only if string is odd
+# s=0
+# st=input('enter string: ')
+# i=0
+# if len(st)%2==1:
+#     while i<len(st):
+#         if 'a'<=st[i]<='z':
+#             s+=ord(st[i])
+#         i+=2
+#     print(s)
+# else:
+#     print('even string')
+
+#20. WAP to priont the following series 10,20,30,...,200.
+# i=10
+# while i<=200:
+#     if i==200:
+#         print(i,end='.')
+#     else:
+#         print(i,end=',')
+#     i+=10
+
+#21. WAP to print the following output
+#I/P: 'roses are red'
+#O/P: ['sesor',3,'der']
+# s=input('enter string: ')
+# st=s.split()
+# i=0
+# l=[]
+# while i<len(st):
+#     if i%2==0:
+#         l+=[st[i][::-1]]
+#     else:
+#         l+=[len(st[i])]
+#     i+=1
+# print(l)
+
+#22. WAP to get the following output
+# I/P: 'i am a fan of vijay'
+# O/P: {'i':1, 'am':2, 'a':1, 'fan':3, 'of':2, 'vijay':5}
+# s=input('enter string: ')
+# d={}
+# i=0
+# st=s.split()
+# while i<len(st):
+#     d[st[i]]=len(st[i])
+#     i+=1
+# print(d)
+
+#23. WAP to get the following 
+# I/P: 'i am a fan of vijay'
+# O/P: {'i':1, 'am':1, 'a':1, 'fan':1, 'of':1, 'vijay':2}
+# s=input('enter string: ')
+# st=s.split()
+# d={}
+# ind=0
+# while ind<len(st):
+#     for j in st:
+#         c=0
+#         for i in j:
+#             if i in 'aeiouAEIOU':
+#                 c+=1
+#         d[j]=c
+#     ind+=1
+# print(d)
+
+#24. WAP to extract all even integers numbers present at odd index from given heterogenous list collection
+# l=[1,2,4,6,7,8,9,12,'a','ab']
+# i=0
+# li=[]
+# while i<len(l):
+#     if type(l[i])==int and l[i]%2==0 and i%2==1:
+#         li+=[l[i]]
+#     i+=1
+# print(li)
+
+#25. WAP to remove all duplicate values present in the given list collection
+# l=[1,2,3,3,4,5,5,6,'a','a','b','b']
+# i=0
+# li=[]
+# while i<len(l):
+#     if l[i] not in li:
+#         li+=[l[i]]
+#     i+=1
+# print(li)
