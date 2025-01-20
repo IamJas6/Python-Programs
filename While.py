@@ -261,3 +261,67 @@
 #         li+=[l[i]]
 #     i+=1
 # print(li)
+
+#26. WAP to store ascii value of all the lower case alphabets present in the given string only if it is odd
+# s=0
+# st=input('enter string: ')
+# i=0
+# while i<len(st):
+#     if 'a'<=st[i]<='z' and ord(st[i])%2==1:
+#         s+=ord(st[i])
+#     i+=1
+# print(s)
+
+#27. WAP to check the given integer nuber is prime or not
+# n=int(input('enter number: '))
+# i=2
+# c=0
+# while i<n:
+#     if n%i==0:
+#         c+=1
+#     i+=1
+# if c==0:
+#     print('Prime number')
+# else:
+#     print('not Prime number')
+
+#28. WAP to check the given integer number is perfect or not
+# n=int(input('enter number: '))
+# s=0
+# i=1
+# while i<n:
+#     if n%i==0:
+#         s+=i
+#     i+=1
+# if s==n:
+#     print('Perfect number')
+# else:
+#     print('Not Perfect number')
+
+#29. WAP to check the given integer number is armstrong number or not
+# n=int(input('enter number: '))
+# a=n
+# l=len(str(n))
+# s=0
+# while n>0:
+#     r=n%10
+#     s+=r**l
+#     n=n//10
+# if s==a:
+#     print('armstrong number')
+# else:
+#     print('not armstrong number')
+
+#30. WAP to split given heterogenous list to single and multi value collection
+# l=[56,7.8,'ab',[8,9],False,{1:2}]
+# M=[]
+# S=[]
+# i=0
+# while i<len(l):
+#     if type(l[i]) in [int,float,complex,bool]:
+#         S+=[l[i]]
+#     else:
+#         M+=[l[i]]
+#     i+=1
+# print('Single value data :',S)
+# print('Multi Value data: ',M)
