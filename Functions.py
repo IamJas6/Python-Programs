@@ -72,4 +72,37 @@
 #     return li
 # print(demo([12,'python','abcd',7.8,'123']))
 
-#9. WAP 
+#9. WAP to extract all integer numbers which are odd from heterogeneous list using recursion function
+# def odd_num(l,li=[],i=0):
+#     if i>=len(l):
+#         return li
+#     if type(l[i])==int and l[i]%2==1:
+#         li+=[l[i]]
+#     return odd_num(l,li,i+1)
+# print(odd_num([12,5,3,4]))
+
+#10. WAP to extract all numbers present in string only if it is divisible by 5 using recursion
+# def str_num(s,st=[],i=0):
+#     if i>=len(s):
+#         return st
+#     if '0'<=s[i]<='9' and int(s[i])%5==0:
+#         st+=[s[i]]
+#     return str_num(s,st,i+1)
+# print(str_num(input('enter string: ')))
+
+#11. WAP to count number of occurances of special characters present in the string using recursion
+# def spl(s,c=0,i=0):
+#     if i>=len(s):
+#         return c
+#     if not ('A'<=s[i]<='Z' or 'a'<=s[i]<='z' or '0'<=s[i]<='9'):
+#         c+=1
+#     return spl(s,c,i+1)
+# print(spl(input('enter string: ')))
+
+#12. WAP to find sum of individual digits of given integer numbers using recursion
+# def digit_sum(n,s=0,i=0):
+#     if i>=len(str(n)):
+#         return s
+#     s+=int(str(n)[i])
+#     return digit_sum(n,s,i+1)
+# print(digit_sum(int(input('enter number: '))))
