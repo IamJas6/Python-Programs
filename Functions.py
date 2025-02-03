@@ -106,3 +106,21 @@
 #     s+=int(str(n)[i])
 #     return digit_sum(n,s,i+1)
 # print(digit_sum(int(input('enter number: '))))
+
+#13. WAP to extract all complex data present in heterogenous list using yield
+# def comp(d):
+#     for i in d:
+#         if type(i)==complex:
+#             yield i
+# print(list(comp([2,3,4j,6+5j])))
+
+#14. WAP to generate squares of all numbers based on the value which is specified for n by use. Only if the 
+# n is even else generate qubes of the numbers from 1 to n by using the yield
+# def gen(n):
+#     if n%2==0:
+#         for i in range(n+1):
+#             yield i**2
+#     else:
+#         for i in range(1,n+1):
+#             yield i**3
+# print(list(gen(int(input('enter number: ')))))
