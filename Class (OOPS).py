@@ -100,3 +100,126 @@
 # s1.display()
 
 #2. Class Method
+# class bank:
+#     bname = 'sbi'
+#     branch = 'mysore'
+#     loan = 'True'
+
+#     def __init__(self,cname, acc, phn, branch):
+#         self.cname = cname
+#         self.acc = acc
+#         self.phn = phn
+#         self.branch = branch
+
+#     def show(self):
+#         print(self.cname)
+#         print(self.acc)
+#         print(self.phn)
+#         print(self.branch)
+#         print()
+    
+#     def ch_cname(self,new):
+#         self.cname = new
+    
+#     def ch_acc(self,new):
+#         self.acc = new
+
+#     def ch_branch(self,new):
+#         self.branch = new
+
+#     @classmethod
+#     def display(cls):
+#         print(cls.bname)
+#         print(cls.branch)
+#         print(cls.loan)
+#         print()
+    
+#     @classmethod
+#     def ch_bname(cls,new):
+#         cls.bname = new
+    
+#     @classmethod
+#     def ch_branch(cls,new):
+#         cls.branch = new
+
+#     @classmethod
+#     def ch_loan(cls,new):
+#         cls.loan = new
+
+# b1 = bank('suhail',242424,123456789,'mysore')
+# b2 = bank('saleem',262626,987654321,'bangalore')
+
+# b1.show()
+# b2.show()
+# bank.display()
+
+# bank.ch_loan('False')
+# bank.ch_bname('HDFC')
+# bank.display()
+
+
+#3 . Static method
+# class bank:
+#     bname = 'sbi'
+#     branch = 'mysore'
+
+#     def __init__(self,cname, acc, phn, bln):
+#         self.cname = cname
+#         self.acc = acc
+#         self.phn = phn
+#         self.bln = bln
+
+#     def balance(self, amt):
+#         self.bln = self.add(self.bln, amt)
+#         self.msg()
+    
+#     def withdraw(self, amt):
+#         if amt<=self.bln:
+#             self.bln = self.sub(self.bln,amt)
+#             self.msg()
+#         else:
+#             print('Insufficient balance')
+        
+#     def show(self):
+#         print(self.cname)
+#         print(self.acc)
+#         print(self.phn)
+#         print(self.bln)
+#         print()
+        
+#     @classmethod
+#     def display(cls):
+#         print(cls.bname)
+#         print(cls.branch)
+#         print()
+
+#     @classmethod
+#     def ch_bname(cls, new):
+#         cls.bname = new
+
+#     @staticmethod
+#     def msg():
+#         print('Transaction successful')
+
+#     @staticmethod
+#     def add(a,b):
+#         return a+b
+    
+#     @staticmethod
+#     def sub(a,b):
+#         return a-b
+
+# b1 = bank('suhail',242424,123456789,1000)
+# b2 = bank('saleem',262626,987654321,1500)
+
+# b1.show()
+# b2.show()
+# bank.display()
+
+# b1.balance(1000)
+# b1.show()
+# b1.withdraw(500)
+# b1.show()
+
+
+#Single Inheritance
