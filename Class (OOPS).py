@@ -223,3 +223,165 @@
 
 
 #Single Inheritance
+# class A:
+#     a=10
+#     b=20
+
+# class B(A):
+#     def __init__(self,c,d):
+#         self.c=c
+#         self.d=d
+# ob = B(30,40)
+# print(ob.a,ob.b,ob.c,ob.d)
+
+#Example
+# class bank1:
+#     bname = 'sbi'
+#     branch = 'mysore'
+#     def __init__(self, name, acc,phn ):
+#         self.name = name
+#         self.acc = acc
+#         self.phn = phn
+#     def display(self):
+#         print(self.name,self.acc,self.phn)
+#     def ch_name(self,new):
+#         self.name = new
+#     @classmethod
+#     def show(cls):
+#         print(cls.bname,cls.branch)
+#     @classmethod
+#     def ch_bname(cls, new):
+#         cls.bname = new
+
+# class bank2(bank1):
+#     def __init__(self, name,acc,phn,adhar,pan):
+#         bank1.__init__(self,name,acc,phn)
+#         self.adhar = adhar
+#         self.pan = pan
+#     def display(self):
+#         super().display()
+#         print(self.adhar,self.pan)
+# c1 = bank1('suhail',242424,123456789)
+# c2 = bank2('saleem',262626,987654321,'adh1234','pan1234')
+# c1.display()
+# print()
+# c1.show()
+# print()
+# c2.display()
+
+#2. Multilevel Inheritance
+# class A:
+#     a=20
+# class B(A):
+#     b = 20
+# class C(B):
+#     c = 30
+# ob = C()
+# print(ob.a, ob.b, ob.c)
+
+#Example
+# class resume1:
+#     qual = '10th'
+#     def __init__(self,name,phn,tper):
+#         self.name = name
+#         self.phn = phn
+#         self.tper = tper
+#     def display(self):
+#         print(self.name)
+#         print(self.phn)
+#         print(self.tper)
+#     @classmethod
+#     def show(cls):
+#         print(cls.qual)
+    
+# class resume2(resume1):
+#     qual = '12th'
+#     def __init__(self, name,phn,tper,twper):
+#         resume1.__init__(self,name,phn,tper)
+#         self.twper = twper
+#     def display(self):
+#         super().display()
+#         print(self.twper)
+#     @classmethod
+#     def show(cls):
+#         print(cls.qual)
+# class resume3(resume2):
+#     qual = 'grad'
+#     def __init__(self, name,phn,tper,twper,gper):
+#         resume2.__init__(self,name,phn,tper,twper)
+#         self.gper = gper
+#     def display(self):
+#         super().display()
+#         print(self.gper)
+#     @classmethod
+#     def show(cls):
+#         print(cls.qual)
+
+# r1 = resume1('suhail',1234567890,81.16)
+# r2 = resume2('suhail',1234567890,81.16,84.16)
+# r3 = resume3('suhail',1234567890,81.16,84.16,87)
+
+# r3.show()
+# r3.display()
+
+
+#3. Multiple Inheritance
+# class A:
+#     a=10
+# class B:
+#     b=20
+# class C:
+#     c=30
+# class D(A,B,C):
+#     pass
+
+# ob = D()
+# print(ob.a, ob.b, ob.c, ob.d)
+
+#Example
+# class add:
+#     @staticmethod
+#     def add(a,b):
+#         return a+b
+# class sub:
+#     def sub(a,b):
+#         return a-b
+# class mul:
+#     def mul(a,b):
+#         return a*b
+# class result(add,sub,mul):
+#     pass
+# print(result.add(10,5))
+# print(result.sub(10,5))
+# print(result.mul(10,5))
+
+#4. Hierarchical inheritance
+# class A:
+#     a=10
+# class B(A):
+#     pass
+# class C(A):
+#     pass
+
+# print(B.a)
+# print(C.a)
+
+#Example
+# class tyss:
+#     iname = ''
+#     def __init__(self,name,phn):
+#         self.name = name
+#         self.phn = phn
+#     def display(self):
+#         print(self.name,self.phn)
+#     @classmethod
+#     def show(cls):
+#         print(cls.iname)
+# class Q(tyss):
+#     iname = 'Qspiders'
+# class P(tyss):
+#     iname = 'Pyspiders'
+
+# tyss.show()
+# Q.show()
+# P.show()
