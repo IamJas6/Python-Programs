@@ -385,3 +385,49 @@
 # tyss.show()
 # Q.show()
 # P.show()
+
+#Encapsulation
+#operator overloading / magic methods
+
+#1. bitwise operations
+# class bit:
+#     def __init__(self, num):
+#         self.num = num
+#     def __lshift__(self,other):
+#         return self.num<<other.num
+#     def __rshift__(self,other):
+#         return self.num>>other.num
+#     def __and__(self, other):
+#         return self.num&other.num
+#     def __or__(self, other):
+#         return self.num|other.num
+#     def __xor__(self, other):
+#         return self.num^other.num
+
+# ob1 =bit(2)
+# ob2 = bit(3)
+# print(ob1<<ob2)
+# print(ob1>>ob2)
+# print(ob1&ob2)
+# print(ob1|ob2)
+# print(ob1^ob2)
+
+#2. Relational operator
+# class rel:
+#     def __init__(self,num):
+#         self.num = num
+#     def __lt__(self,other):
+#         return self.num<other.num
+#     def __gt__(self,other):
+#         return self.num>other.num
+#     def __le__(self,other):
+#         return self.num<=other.num
+#     def __ge__(self,other):
+#         return self.num>=other.num
+
+# ob1 = rel(10)
+# ob2 = rel(15)
+# print(ob1<ob2)
+# print(ob1>ob2)
+# print(ob1<=ob2)
+# print(ob1>=ob2)
