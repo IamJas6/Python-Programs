@@ -431,3 +431,180 @@
 # print(ob1>ob2)
 # print(ob1<=ob2)
 # print(ob1>=ob2)
+
+#1. WAP to create a class for a library and demonstrate single level inheritance with contructor & method chaining
+# class library:
+#     def __init__(self, lname,branch):
+#         self.lname = lname
+#         self.branch = branch
+#     def display(self):
+#         print("Library Name: ", self.lname)
+#         print("Branch: ", self.branch)
+# class member(library):
+#     def __init__(self, lname,branch,mname,mid):
+#         library.__init__(self, lname,branch)
+#         self.mname = mname
+#         self.mid = mid
+#     def display(self):
+#         super().display()
+#         print("Member Name: ", self.mname)
+#         print("Member ID: ", self.mid)
+
+# l1 = library('Philos', 'Mysore')
+# l2 = library('Philos', 'Banglore')
+# m1 = member('Philos', 'Mysore','Suhail','S1')
+# m2 = member('Philos', 'Banglore','Yasir','Y1')
+
+# print('Libraries')
+# l1.display()
+# print()
+# l2.display()
+# print()
+
+# print('Details')
+# m1.display()
+# print()
+# m2.display()
+
+#2. WAP to create a class for vehicle and demonstrate multilevel inheritance
+# class vehicle:
+#     def __init__(self, vname, vtype):
+#         self.vname = vname
+#         self.vtype = vtype
+#     def display(self):
+#         print("Vehicle Name: ", self.vname)
+#         print("Vehicle Type: ", self.vtype)
+
+# class details(vehicle):
+#     def __init__(self, vname, vtype, price):
+#         vehicle.__init__(self, vname, vtype)
+#         self.price = price
+#     def display(self):
+#         super().display()
+#         print("Price: ", self.price)
+# class member(details):
+#     def __init__(self, vname, vtype, price, mname, mid):
+#         details.__init__(self, vname, vtype, price)
+#         self.mname = mname
+#         self.mid = mid
+#     def display(self):
+#         super().display()
+#         print("Member Name: ", self.mname)
+#         print("Member ID: ", self.mid)
+
+# v1 = vehicle('BMW M5 CS', 'Sedan')
+# v2 = vehicle('Polo GT', 'Sedan')
+
+# d1 = details('BMW M5 CS', 'Sedan', '2,50,00,000')
+# d2 = details('Polo GT', 'Sedan', '8,00,000')
+
+# m1 = member('BMW M5 CS', 'Sedan', '2,50,00,000','Suhail','S1')
+# m2 = member('Polo GT', 'Sedan', '8,00,000','Yasir','Y1')
+
+# print('Vehicles',end="\n")
+# v1.display()
+# print()
+# v2.display()
+# print()
+
+# print('Details',end="\n")
+# d1.display()
+# print()
+# d2.display()
+# print()
+
+# print('Members',end="\n")
+# m1.display()
+# print()
+# m2.display()
+
+
+#3. WAP to create a class for travel agency and show multiple inheritance with chaining
+# class flightbook:
+#     def __init__(self, place, tprice):
+#         self.place = place
+#         self.tprice = tprice
+#     def display(self):
+#         print("Place: ", self.place)
+#         print("Ticket Price: ", self.tprice)
+# class hotelbook:
+#     def __init__(self, hname, rprice):
+#         self.hname = hname
+#         self.rprice = rprice
+#     def show(self):
+#         print("Hotel Name: ", self.hname)
+#         print("Room Price: ", self.rprice)
+
+# class travelagency(flightbook, hotelbook):
+#     def __init__(self, place,tprice,hname,rprice,tname,branch):
+#         flightbook.__init__(self, place, tprice)
+#         hotelbook.__init__(self, hname, rprice)
+#         self.tname = tname
+#         self.branch = branch
+#     def display(self):
+#         super().display()
+#         super().show()
+#         print("Travel Agency Name: ", self.tname)
+#         print("Branch: ", self.branch)
+
+# f1 = flightbook('Tokyo', '1,50,000')
+
+# h1 = hotelbook('Tokyo Hotel', '25,000')
+
+# T1 = travelagency('Tokyo', '1,50,000', 'Tokyo  Hotel', '25,000', 'Mysore Travels', 'Mysore')
+
+# print('Flight Detail', end='\n')
+# f1.display()
+# print()
+
+# print('Hotel Details', end='\n')
+# h1.show()
+# print()
+
+# print('Travel Detail', end='\n')
+# T1.display()
+
+
+#4. WAP to create a class for hospital and perform hierarchical inheritance
+# class hospital:
+#     def __init__(self, hname, phn):
+#         self.hname = hname
+#         self.phn = phn
+#     def display(self):
+#         print("Hospital Name: ", self.hname)
+#         print("Phone Number: ", self.phn)
+# class doctor(hospital):
+#     def __init__(self, hname, phn, dname, specialization):
+#         hospital.__init__(self, hname, phn)
+#         self.dname = dname
+#         self.specialization = specialization
+#     def display(self):
+#         super().display()
+#         print("Doctor Name: ", self.dname)
+#         print("Specialization: ", self.specialization)
+# class patient(hospital):
+#     def __init__(self, hname, phn, pname, age):
+#         hospital.__init__(self, hname, phn)
+#         self.pname = pname
+#         self.age = age
+#     def display(self):
+#         super().display()
+#         print("Patient Name: ", self.pname)
+#         print("Age: ", self.age)
+
+# h1 = hospital('Manipal Hospital', '1234567890')
+
+# d1 = doctor('Manipal Hospital', '1234567890', 'Dr. Alok', 'Cardiologist')
+
+# p1 = patient('Manipal Hospital', '1234567890', 'John Doe', 35)
+
+# print('Hospital Detail', end='\n')
+# h1.display()
+# print()
+
+# print('Doctor Detail', end='\n')
+# d1.display()
+# print()
+
+# print('Patient Detail', end='\n')
+# p1.display()
