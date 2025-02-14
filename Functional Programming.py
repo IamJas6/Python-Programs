@@ -28,3 +28,34 @@
 #5. WAP to check given integer number is divisible by 3 or not
 # l = lambda n: n%3==0
 # print(l(n=int(input('enter number: '))))
+
+
+#Map
+#1. WAP to find sum of individual digits of all the integer numbers present in homogenous list collection
+# def sum(n):
+#     s=0
+#     for i in str(n):
+#         s+=int(i)
+#     return s
+# l=[12,34,56,78,90]
+# li=list(map(sum,l))
+# print(li)
+
+#2.WAP to find the factorial of all integer numbers present in homogenous list collection
+# def fact(n):
+#     f=1
+#     i=1
+#     while i<=n:
+#         f*=i
+#         i+=1
+#     return f
+# print(list(map(fact,[6,3,2])))
+
+#3. WAP find square of all the integer numbers present in range 1 to 10 by lambda and map
+# print(list(map(lambda s:s**2, range(1,11))))
+
+#4. WAP to add 10 to all the numbers present from range 20 to 30
+# print(list(map(lambda s:s+10, range(20,31))))
+
+#5. WAP to store the length of all the string data present in homogenous list collection
+# print(list(map(lambda s:len(s),['suhail','uddin','yasir'])))
