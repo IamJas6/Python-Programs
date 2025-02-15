@@ -59,3 +59,18 @@
 
 #5. WAP to store the length of all the string data present in homogenous list collection
 # print(list(map(lambda s:len(s),['suhail','uddin','yasir'])))
+
+
+#Filters
+#1. WAP to print only even numbers from range 1 to 100
+# print(list(filter(lambda e: e%2==0, [2,3,4,5,6])))
+
+#2. WAP to extract all integer numbers which is divisible by 5 from given heterogeneous list
+# print(list(filter(lambda n: type(n)==int and n%5==0, ['a','5',5,15,True] )))
+
+#3. WAP to extract only numbers from given string
+# print(list(filter(lambda s: '0'<=s<='9', 'suha1l udd1n')))
+
+#4. WAP to extract all string data present in the homogenous list which should have atleast one 'a' in it 
+#and length of string should be >=3
+# print(list(filter(lambda s: 'a' in s and len(s)>=3, ['suhail','uddin','yasir'])))
