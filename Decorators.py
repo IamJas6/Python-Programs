@@ -34,3 +34,20 @@
 #     n2=int(input('enter number2: '))
 #     print(n1+n2)
 # sum()
+
+
+#----------------OR-------------#
+import time
+def timer(func):
+    def wrapper(*args,**kwargs):
+        start_time = time.time()
+        func(*args,**kwargs)
+        end_time = time.time()
+        print(f"Time taken by function {func.__name__}: {end_time - start_time} seconds")
+    return wrapper
+
+@timer
+def cal_sum(n):
+    return sum(range(n))
+print(cal_sum(10))
+    
